@@ -1,6 +1,7 @@
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
+import java.lang.Math.*;
 
 public class Calculator extends JFrame implements ActionListener {
     
@@ -129,7 +130,8 @@ public class Calculator extends JFrame implements ActionListener {
     public void getSqrt() {
         // TODO: Group 4: Square Root: Calculate and display the square root after user hits √.
         try {
-            throw new NumberFormatException();
+            temporary[0] = Math.sqrt(Double.parseDouble(display.getText()));
+            lastOperatorSelected = "√";
         } catch(NumberFormatException e) {
         }
     }
